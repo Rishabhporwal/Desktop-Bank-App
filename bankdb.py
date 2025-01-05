@@ -36,8 +36,8 @@ class Database:
     def authenticate_user(self, email, password):
         return email in self.data and self.data[email]["password"] == password
 
-    def get_balance(self):
-        pass
+    def get_balance(self, email):
+        return self.data[email]["balance"]
 
     def update_balance(self):
         pass

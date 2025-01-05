@@ -189,7 +189,8 @@ class BankingApp:
         )
 
     def view_balance(self, email):
-        pass
+        balance = self.dbo.get_balance(email)
+        messagebox.showinfo("Balance", f"Your current balance is {balance}")
 
     def transaction_gui(self, email, transaction_type):
         pass
